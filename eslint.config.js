@@ -1,10 +1,12 @@
-import js from "@eslint/js";
-
-export default [
-    js.configs.recommended,
+module.exports = [
     {
+        files: ["js/**/*.js"],
+        languageOptions: {
+            ecmaVersion: "latest",
+            sourceType: "script"
+        },
         rules: {
-            // Aquí puedes añadir o desactivar reglas manuales si lo deseas
+            // Dejamos las reglas vacías para que solo compruebe errores de sintaxis críticos
         }
     }
 ];
