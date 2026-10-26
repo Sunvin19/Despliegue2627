@@ -22,7 +22,7 @@ jobs:
         run: npx html-validate index.html
 
       - name: Linting CSS (stylelint)
-        run: npx stylelint "css/**/*.css"
+        run: npx stylelint "*.css"
 
       - name: Linting JavaScript (eslint)
         run: npx eslint js/
