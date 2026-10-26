@@ -22,7 +22,9 @@ jobs:
         run: npx html-validate index.html
 
       - name: Linting CSS (stylelint)
-        run: npx stylelint 'css/**/*.css'
+        workflow_directory: ./DSAN
+        run: npx stylelint css/**/*.css --fix
+
 
       - name: Linting JavaScript (eslint)
         run: npx eslint js/
