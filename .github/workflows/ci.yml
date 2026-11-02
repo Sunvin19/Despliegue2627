@@ -21,13 +21,12 @@ jobs:
       - name: Validar HTML (html-validate)
         run: npx html-validate index.html
 
-      # Ejecuta stylelint pasándole una configuración estándar directamente en la línea de comandos
       - name: Linting CSS (stylelint)
         run: npx stylelint "css/**/*.css" --config stylelint-config-standard
 
-      # Ejecuta eslint pasándole una regla vacía básica en línea para que solo busque fallos graves de sintaxis
       - name: Linting JavaScript (eslint)
-        run: npx eslint js/**/*.js --no-config-lookup --rule '{"semi": "off"}'
+        run: |
+          npx eslint js/**/*.js --no-config-lookup --rule '{"semi": "off"}'
 
       - name: Ejecutar tests unitarios
         run: npm test
