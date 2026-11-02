@@ -2,17 +2,17 @@ const DEMO_USERS = [
   { email: 'alumno@instituto.es', password: 'Alumno123!' }
 ];
 
-const form    = document.getElementById('loginForm');
+const form = document.getElementById('loginForm');
 const emailEl = document.getElementById('email');
-const pwdEl   = document.getElementById('password');
+const pwdEl = document.getElementById('password');
 const formMsg = document.getElementById('formMsg');
 
 function validate() {
   let valid = true;
   const emailErr = document.getElementById('emailError');
-  const pwdErr   = document.getElementById('pwdError');
+  const pwdErr = document.getElementById('pwdError');
   emailErr.textContent = '';
-  pwdErr.textContent   = '';
+  pwdErr.textContent = '';
   if (!emailEl.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
     emailErr.textContent = 'Introduce un correo válido.';
     valid = false;
